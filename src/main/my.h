@@ -20,6 +20,7 @@ char *my_revstr(char *str);
 char *my_strcat(char *str1, char *str2);
 int my_strcmp(char *str1, char *str2);
 char *my_strcpy(char *str1, char *str2);
+char *my_strncpy(char *str1, char *str2, int nb);
 int my_strlen(char *str);
 char **my_strtowordarray(char *str1, char *separator);
 void my_swap(char *c1, char *c2);
