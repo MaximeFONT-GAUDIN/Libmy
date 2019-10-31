@@ -12,5 +12,5 @@ char *str2 = "World";
 
 Test(my_strcat, concat_correctly)
 {
-    cr_assert(my_strcat(str1, str2) == "HelloWorld");
+    cr_assert_str_eq(my_strcat(str1, str2), "HelloWorld");
 }

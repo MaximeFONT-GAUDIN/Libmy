@@ -13,5 +13,5 @@ char str2[11];
 Test(my_strcpy, in_allocated_string)
 {
     my_strcpy(str1, str2);
-    cr_assert(strcmp(str2, "Hello World") == 0);
+    cr_assert_str_eq(str2, "Hello World");
 }

@@ -13,10 +13,10 @@ char *str3 = "World";
 
 Test(my_strcmp, the_same)
 {
-    cr_assert(my_strcmp(str1, "HelloWorld") == 0);
+    cr_assert_eq(my_strcmp(str1, "HelloWorld"), 0);
 }
 
 Test(my_strcmp, different)
 {
-    cr_assert(my_strcmp(str2, str3) == 1);
+    cr_assert_eq(my_strcmp(str2, str3), 1);
 }
