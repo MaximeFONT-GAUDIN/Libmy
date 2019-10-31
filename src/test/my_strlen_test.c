@@ -5,6 +5,7 @@
 ** my_strlen_test.c
 */
 
+#include "my_test.h"
 #include <criterion/criterion.h>
 
 char *str1 = "Hello World";

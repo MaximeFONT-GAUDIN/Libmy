@@ -5,6 +5,7 @@
 // my_alphaisprint_test.c
 //
 
+#include "my_test.h"
 #include <criterion/criterion.h>
 
 int res;
