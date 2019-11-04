@@ -11,7 +11,7 @@
 Test(my_strcmp, the_same)
 {
     char *str1 = "HelloWorld";
-    
+
     cr_assert_eq(my_strcmp(str1, "HelloWorld"), 0);
 }
 
