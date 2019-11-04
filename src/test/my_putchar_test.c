@@ -22,3 +22,24 @@ Test(my_putchar, ascii65)
     my_putchar(65);
     cr_assert_stdout_eq_str("A");
 }
+
+Test(my_putchar, multiple_call)
+{
+    cr_redirect_stdout();
+    my_putchar('a');
+    my_putchar('b');
+    my_putchar('c');
+    my_putchar('d');
+    cr_assert_stdout_eq_str("abcd");
+}
+
+Test(my_putchar, non_printable)
+{
+    char str[2];
+
+    str[0] = 2;
+    str[1] = 0;
+    cr_redirect_stdout();
+    my_putchar(2);
+    cr_assert_stdout_eq_str(str);
+}
