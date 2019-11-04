@@ -29,7 +29,7 @@ fclean		:	clean
 re			:	fclean all
 
 test		:	$(SRC) $(TEST_SRC)
-				$(CC) -fprofile-arcs -ftest-coverage -Isrc/main -DMOCKING $(CFLAGS) $(CPPFLAGS) $(shell pkg-config --libs --cflags criterion) $< -o tests
+				$(CC) -fprofile-arcs -ftest-coverage -Isrc/main -DMOCKING $(CFLAGS) $(CPPFLAGS) $(shell pkg-config --libs --cflags criterion) $^ -o tests
 				./tests
 
 report		:	test
