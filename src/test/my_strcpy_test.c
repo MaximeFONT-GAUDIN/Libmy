@@ -10,18 +10,27 @@
 
 Test(my_strcpy, in_allocated_string)
 {
-    char *str1 = "Hello World";
-    char str2[11];
+    char *src = "Hello World";
+    char dest[11];
 
-    my_strcpy(str1, str2);
-    cr_assert_str_eq(str2, "Hello World");
+    my_strcpy(dest, src);
+    cr_assert_str_eq(dest, "Hello World");
 }
 
 Test(my_strcpy, cpy_in_bigger_container)
 {
-    char *str1 = "Bonjour Monde";
-    char str2[100];
+    char *src = "Bonjour Monde";
+    char dest[100];
 
-    my_strcpy(str1, str2);
-    cr_assert_str_eq(str2, "Bonjour Monde");
+    my_strcpy(dest, src);
+    cr_assert_str_eq(dest, "Bonjour Monde");
+}
+
+Test(my_strcpy, pointer_return)
+{
+    char *src = "Bonjour";
+    char dest[100];
+    char *r = my_strcpy(dest, src);
+
+    cr_assert_eq(r, dest);
 }

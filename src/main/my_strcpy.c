@@ -11,8 +11,8 @@ char *my_strcpy(char *str1, char *str2)
 {
     int i = 0;
 
-    for (; str1[i] != 0; i++)
-        str2[i] = str1[i];
-    str2[i] = 0;
-    return (str2);
+    for (; str2[i] != 0; i++)
+        str1[i] = str2[i];
+    str1[i] = 0;
+    return (str1);
 }
