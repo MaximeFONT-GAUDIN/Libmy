@@ -52,3 +52,12 @@ Test(my_strcat, same_pointer)
 
     cr_assert_eq(str1, r);
 }
+
+Test(my_strcat, empty_strings)
+{
+    char str1[5] = "";
+    char *str2 = "";
+    char *r = my_strcat(str1, str2);
+
+    cr_assert_str_empty(r);
+}
