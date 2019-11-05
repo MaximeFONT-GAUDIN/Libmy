@@ -18,12 +18,12 @@ Test(my_strncmp, different)
     cr_assert_eq(my_strncmp("Hello", "World", 2), 1);
 }
 
-Test(my_strncmp, str1_small)
+Test(my_strncmp, str2_small)
 {
     cr_assert_eq(my_strncmp("HelloWorld", "Hello", 7), 1);
 }
 
-Test(my_strncmp, str2_small)
+Test(my_strncmp, str1_small)
 {
     cr_assert_eq(my_strncmp("Hello", "HelloWorld", 7), 1);
 }
