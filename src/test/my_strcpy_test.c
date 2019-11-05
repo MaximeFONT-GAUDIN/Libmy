@@ -34,3 +34,12 @@ Test(my_strcpy, pointer_return)
 
     cr_assert_eq(r, dest);
 }
+
+Test(my_strcpy, empty_string)
+{
+    char *src = "";
+    char dest[100];
+    
+    my_strcpy(dest, src);
+    cr_assert_str_empty(dest);
+}
