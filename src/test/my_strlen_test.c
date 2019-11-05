@@ -14,10 +14,15 @@ int len = 11;
 
 Test(my_strlen, the_same)
 {
-    cr_assert_eq(strlen(str1), my_strlen(str1));
+    cr_assert_eq(strlen(str1), 11);
 }
 
 Test(my_strlen, difference)
 {
     cr_assert_neq(my_strlen(str1), my_strlen(str2));
+}
+
+Test(my_strlen, empty_string)
+{
+    cr_assert_eq(my_strlen(""), 0);
 }
