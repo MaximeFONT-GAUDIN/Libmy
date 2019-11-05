@@ -30,3 +30,19 @@ Test(my_strcmp, greater_than)
 
     cr_assert_gt(my_strcmp(str1, str2), 0);
 }
+
+Test(my_strcmp, str1_contain_str2)
+{
+    char *str1 = "HelloWorld";
+    char *str2 = "Hello";
+
+    cr_assert_gt(my_strcmp(str1, str2), 0);
+}
+
+Test(my_strcmp, str2_contain_str1)
+{
+    char *str2 = "HelloWorld";
+    char *str1 = "Hello";
+
+    cr_assert_gt(my_strcmp(str1, str2), 0);
+}
