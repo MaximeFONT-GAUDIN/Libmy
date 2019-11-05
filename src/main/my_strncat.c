@@ -7,19 +7,15 @@
 
 #include "my.h"
 
-char *my_strncat(char *src, char *dest, int n)
+char *my_strncat(char *dest, char *src, int n)
 {
-    int size_src = 0;
-    char *ret;
+    int size_dest = 0;
 
-    for (;src[size_src] != 0; size_src++);
-    ret = malloc(sizeof(char) * (size_src + n) + 1);
-    for (int i = 0; src[i] != 0; i++)
-        ret[i] = src[i];
+    for (; dest[size_dest] != 0; size_dest++);
     for (int i = 0; i != n; i++) {
-        ret[size_src] = dest[i];
-        size_src++;
+        dest[size_dest] = src[i];
+        size_dest++;
     }
-    ret[size_src] = 0;
-    return (ret);
+    dest[size_dest] = 0;
+    return (dest);
 }

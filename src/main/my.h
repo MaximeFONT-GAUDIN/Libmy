@@ -25,7 +25,7 @@ int my_strlen(char *str);
 char **my_strtowordarray(char *str1, char *separator);
 void my_swap(char *c1, char *c2);
 int my_alphaisprint(char c);
-char *my_strncat(char *src, char *dest, int n);
+char *my_strncat(char *dest, char *src, int n);
 int my_strncmp(char *str1, char *str2, int n);
 
 #endif
