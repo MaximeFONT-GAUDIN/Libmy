@@ -24,3 +24,15 @@ Test(my_revstr, rev_additionneur)
     rev = my_revstr("-+-+-+-+-+-+-+");
     cr_assert_str_eq(rev, "+-+-+-+-+-+-+-");
 }
+
+Test(my_revstr, epty_string)
+{
+    char *str = "";
+
+    cr_assert_str_empty(str);
+}
+
+Test(my_revstr, even_string)
+{
+    cr_assert_str_eq(my_revstr("salut"), "tulas");
+}
