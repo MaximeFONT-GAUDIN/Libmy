@@ -25,3 +25,13 @@ Test(my_strncpy, cpy_bigger)
 
     cr_assert_str_eq(my_strncpy(str1, str2, nb), "Hello");
 }
+
+Test(my_strncy, empty_string)
+{
+    char *str1 = "";
+    char str2[20];
+    int nb = 3;
+
+    my_strncpy(str1, str2, nb);
+    cr_assert_str_empty(str2);
+}

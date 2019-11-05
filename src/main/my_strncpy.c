@@ -9,8 +9,13 @@
 
 char *my_strncpy(char *str1, char *str2, int nb)
 {
-    for (int i = 0;str1[i] != 0 && i < nb; i++) {
+    int i = 0;
+
+    for (;str1[i] != 0 && i < nb; i++) {
         str2[i] = str1[i];
+    }
+    if (my_strlen(str1) < nb) {
+        str2[i] = 0;
     }
     return (str2);
 }
