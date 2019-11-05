@@ -29,7 +29,7 @@ Test(my_revstr, epty_string)
 {
     char *str = "";
 
-    cr_assert_str_empty(str);
+    cr_assert_str_empty(my_revstr(str));
 }
 
 Test(my_revstr, even_string)
