@@ -29,5 +29,7 @@ char *my_strncat(char *dest, char *src, int n);
 int my_strncmp(char *str1, char *str2, int n);
 int my_alphaisnum(char c);
 int my_alphaisalpha(char c);
+int my_alphaisupper(char c);
+int my_alphaislower(char c);
 
 #endif
