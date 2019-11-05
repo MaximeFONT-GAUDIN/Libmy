@@ -9,6 +9,10 @@
 
 void my_putstr(char *str)
 {
+    if (str[0] == 0) {
+        my_putchar(0);
+        return;
+    }
     for (int i = 0; str[i] != 0; i++)
-        write(1, &str[i], 1);
+        my_putchar(str[i]);
 }

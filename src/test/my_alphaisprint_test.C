@@ -8,8 +8,6 @@
 #include "my_test.h"
 #include <criterion/criterion.h>
 
-int res;
-
 Test(my_alphaisprint, alpha_is_printable)
 {
     cr_assert_eq(my_alphaisprint('c'), 0);
