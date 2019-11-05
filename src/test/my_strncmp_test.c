@@ -15,17 +15,17 @@ Test(my_strncmp, egal)
 
 Test(my_strncmp, different)
 {
-    cr_assert_eq(my_strncmp("Hello", "World", 2), 1);
+    cr_assert_lt(my_strncmp("Hello", "World", 2), 0);
 }
 
 Test(my_strncmp, str2_small)
 {
-    cr_assert_eq(my_strncmp("HelloWorld", "Hello", 7), 1);
+    cr_assert_gt(my_strncmp("HelloWorld", "Hello", 7), 0);
 }
 
 Test(my_strncmp, str1_small)
 {
-    cr_assert_eq(my_strncmp("Hello", "HelloWorld", 7), 1);
+    cr_assert_lt(my_strncmp("Hello", "HelloWorld", 7), 0);
 }
 
 Test(My_strncmp, str1_small_5char)
