@@ -31,5 +31,7 @@ int my_alphaisnum(char c);
 int my_alphaisalpha(char c);
 int my_alphaisupper(char c);
 int my_alphaislower(char c);
+char my_alphatolower(char c);
+char my_alphatoupper(char c);
 
 #endif
