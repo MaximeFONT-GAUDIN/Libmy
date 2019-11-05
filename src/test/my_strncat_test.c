@@ -32,3 +32,37 @@ Test(my_strncat, the_good_pointer)
 
     cr_assert_eq(r, dest);
 }
+
+Test(my_strncat, empty_dest)
+{
+    char *src = "bonjour";
+    char dest[15] = "";
+
+    my_strncat(dest, src, 2);
+    cr_assert_str_eq(dest, "bo");
+}
+
+Test(my_strncat, empty_src)
+{
+    char *src = "";
+    char dest[10] = "salut";
+
+    my_strncat(dest, src, 2);
+    cr_assert_str_eq(dest, "salut");
+}
+
+Test(my_strncat, both_empty)
+{
+    char *src = "";
+    char dest[5] = "";
+
+    cr_assert_str_empty(my_strncat(dest, src, 3));
+}
+
+Test(my_strncat, bigger_than_src)
+{
+    char *src = "deux";
+    char dest[100] = "un ";
+
+    cr_assert_str_eq(my_strncat(dest, src, 50), "un deux");
+}
