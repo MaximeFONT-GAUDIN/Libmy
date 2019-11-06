@@ -39,3 +39,19 @@ Test(my_strchr, empty_str)
 
     cr_assert_eq(r, NULL);
 }
+
+Test(my_strchr, ocurrence_is_the_first)
+{
+    char *str = "bonjour";
+    char *r = my_strchr(str, 'b');
+
+    cr_assert_eq(r, str);
+}
+
+Test(my_strchr, occurence_is_the_last)
+{
+    char *str = "bonjour";
+    char *r = my_strchr(str, 'r');
+
+    cr_assert_eq(r, str + 6);
+}
