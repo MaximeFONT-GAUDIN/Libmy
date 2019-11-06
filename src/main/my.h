@@ -33,5 +33,6 @@ int my_alphaisupper(char c);
 int my_alphaislower(char c);
 char my_alphatolower(char c);
 char my_alphatoupper(char c);
+char *my_strchr(char *str, char c);
 
 #endif
