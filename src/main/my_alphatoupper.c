@@ -10,6 +10,6 @@
 char my_alphatoupper(char c)
 {
     if (c > 96 && c < 123)
-        c = c - 32;
+        return (c - 32);
     return (c);
 }

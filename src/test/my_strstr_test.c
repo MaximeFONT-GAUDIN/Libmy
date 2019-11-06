@@ -13,7 +13,6 @@ Test(my_strstr, correct)
     char *str = "je dois chercher une chaine de caractere dans cette chaine de caractere";
     char *r = my_strstr(str, "dois");
 
-    printf("str : %s\nr : %s\n",str, r);
     cr_assert_eq(r, str + 3);
 }
 

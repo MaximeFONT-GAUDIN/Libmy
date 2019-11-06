@@ -1,29 +1,6 @@
--rw-rw-r-- 1 maxime maxime 292 Oct 30 11:39 my_compute_power_rec.c
--rw-rw-r-- 1 maxime maxime 257 Oct 30 11:39 my_compute_square_root.c
--rw-rw-r-- 1 maxime maxime 124 Oct 30 11:39 my_find_prime_sup.c
--rw-rw-r-- 1 maxime maxime 110 Oct 30 11:39 my_getnbr.c
--rw-rw-r-- 1 maxime maxime 205 Oct 30 11:39 my_isneg.c
--rw-rw-r-- 1 maxime maxime 302 Oct 30 11:39 my_is_prime.c
--rw-rw-r-- 1 maxime maxime 150 Oct 30 11:39 my_putchar.c
--rw-rw-r-- 1 maxime maxime 395 Oct 30 11:39 my_put_nbr.c
--rw-rw-r-- 1 maxime maxime 233 Oct 30 11:39 my_putstr.c
--rw-rw-r-- 1 maxime maxime 106 Oct 30 11:39 my_revstr.c
--rw-rw-r-- 1 maxime maxime 121 Oct 30 11:39 my_showmem.c
--rw-rw-r-- 1 maxime maxime 137 Oct 30 11:39 my_sort_in_array.c
--rw-rw-r-- 1 maxime maxime 127 Oct 30 11:39 my_strcapitalize.c
--rw-rw-r-- 1 maxime maxime 123 Oct 30 11:39 my_strcat.c
--rw-rw-r-- 1 maxime maxime 124 Oct 30 11:39 my_strcmp.c
--rw-rw-r-- 1 maxime maxime 245 Oct 30 11:39 my_strcpy.c
--rw-rw-r-- 1 maxime maxime 126 Oct 30 11:39 my_str_isalpha.c
--rw-rw-r-- 1 maxime maxime 125 Oct 30 11:39 my_str_islower.c
--rw-rw-r-- 1 maxime maxime 119 Oct 30 11:39 my_str_isnum.c
--rw-rw-r-- 1 maxime maxime 137 Oct 30 11:39 my_str_isprintable.c
--rw-rw-r-- 1 maxime maxime 126 Oct 30 11:39 my_str_isupper.c
--rw-rw-r-- 1 maxime maxime 218 Oct 30 11:39 my_strlen.c
--rw-rw-r-- 1 maxime maxime 119 Oct 30 11:39 my_strlowcase.c
--rw-rw-r-- 1 maxime maxime 134 Oct 30 11:39 my_strncat.c
--rw-rw-r-- 1 maxime maxime 135 Oct 30 11:39 my_strncmp.c
--rw-rw-r-- 1 maxime maxime 246 Oct 30 11:39 my_strncpy.c
--rw-rw-r-- 1 maxime maxime 127 Oct 30 11:39 my_strstr.c
--rw-rw-r-- 1 maxime maxime 115 Oct 30 11:39 my_strupcase.c
--rw-rw-r-- 1 maxime maxime 160 Oct 30 11:39 my_swap.c
+void my_sort_int_array(int *tab, size);
+int my_compute_power_rec(int nb, int power);
+int my_compute_square_root(int nb);
+char *my_strcapitalize(char *str);
+int my_showstr(char *str);
+int my_showmem(char *str, int size);

@@ -36,5 +36,6 @@ char my_alphatoupper(char c);
 char *my_strchr(char *str, char c);
 char *my_strrchr(char *str, char c);
 char *my_strstr(char *str, char *oc);
+char *my_strcapitalize(char *str);
 
 #endif
