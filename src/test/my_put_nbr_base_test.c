@@ -37,8 +37,6 @@ Test(my_put_nbr_base, in_10_out_20_nb_1000)
     cr_assert_stdout_eq_str("2A0");
 }
 
-
-
 Test(my_put_nbr_base, neq_in_10_out_10_nb_5)
 {
     cr_redirect_stdout();
