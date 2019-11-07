@@ -50,5 +50,6 @@ int my_str_isprintable(char *str);
 int my_isneg(int n);
 int my_is_prime(int nb);
 int my_find_prime_sup(int nb);
+int my_compute_power_rec(int nb, int p);
 
 #endif
