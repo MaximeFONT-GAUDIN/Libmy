@@ -49,5 +49,6 @@ int my_str_isupper(char *str);
 int my_str_isprintable(char *str);
 int my_isneg(int n);
 int my_is_prime(int nb);
+int my_find_prime_sup(int nb);
 
 #endif
