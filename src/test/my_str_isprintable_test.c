@@ -37,3 +37,8 @@ Test(my_str_isprintable, empty_str)
 {
     cr_assert_eq(my_str_isprintable(""), 0);
 }
+
+Test(my_str_isprintable, non_printable)
+{
+    cr_assert_eq(my_str_isprintable("des mots\n sur deux \tlignes"), 0);
+}
