@@ -47,5 +47,6 @@ int my_str_isnum(char *str);
 int my_str_islower(char *str);
 int my_str_isupper(char *str);
 int my_str_isprintable(char *str);
+int my_isneg(int n);
 
 #endif
