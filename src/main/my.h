@@ -41,5 +41,6 @@ int my_showstr(char *str);
 void my_put_nbr_base(int nb, char *base);
 int my_showmem(char *str, int size);
 char *my_strupcase(char *str);
+char *my_strlowcase(char *str);
 
 #endif
