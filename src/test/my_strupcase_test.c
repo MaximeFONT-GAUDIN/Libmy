@@ -10,25 +10,40 @@
 
 Test(my_strupcase, all_lowcase)
 {
-    cr_assert_str_eq(my_strupcase("jecrisenminuscule"), "JECRISENMINUSCULE");
+    char str1[] = "jecrisenminuscule";
+    
+    cr_assert_str_eq(my_strupcase(str1), "JECRISENMINUSCULE");
+    cr_assert_eq(str1, my_strupcase(str1));
 }
 
 Test(my_strupcase, sentence)
 {
-    cr_assert_str_eq(my_strupcase("j'ecris une phrase"), "J'ECRIS UNE PHRASE");
+    char str1[] = "j'ecris une phrase";
+    
+    cr_assert_str_eq(my_strupcase(str1), "J'ECRIS UNE PHRASE");
+    cr_assert_eq(str1, my_strupcase(str1));
 }
 
 Test(my_strupcase, with_nbr)
 {
-    cr_assert_str_eq(my_strupcase("1 phrase avec des ch1ffres"), "1 PHRASE AVEC DES CH1FFRES");
+    char str1[] = "1 phrase avec des ch1ffres";
+    
+    cr_assert_str_eq(my_strupcase(str1), "1 PHRASE AVEC DES CH1FFRES");
+    cr_assert_eq(str1, my_strupcase(str1));
 }
 
 Test(my_strupcase, with_upcase)
 {
-    cr_assert_str_eq(my_strupcase("Une Phrase aVec dES mAJUSCULEs"), "UNE PHRASE AVEC DES MAJUSCULES");
+    char str1[] = "Une Phrase aVec dES mAJUSCULEs";
+    
+    cr_assert_str_eq(my_strupcase(str1), "UNE PHRASE AVEC DES MAJUSCULES");
+    cr_assert_eq(str1, my_strupcase(str1));
 }
 
 Test(my_strupcase, empty_string)
 {
-    cr_assert_str_eq(my_strupcase(""), "");
+    char str1[] = "";
+    
+    cr_assert_str_eq(my_strupcase(str1), "");
+    cr_assert_eq(str1, my_strupcase(str1));
 }

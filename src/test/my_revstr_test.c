@@ -11,28 +11,32 @@
 
 Test(my_revstr, rev_HelloWorld)
 {
-    char *rev;
+    char rev[] = "HelloWorld";
     
-    rev = my_revstr("HelloWorld");
-    cr_assert_str_eq(rev, "dlroWolleH");
+    cr_assert_str_eq(my_revstr(rev), "dlroWolleH");
+    cr_assert_eq(rev, my_revstr(rev));
 }
 
 Test(my_revstr, rev_additionneur)
 {
-    char *rev;
+    char rev[] = "-+-+-+-+-+-+-+";
 
-    rev = my_revstr("-+-+-+-+-+-+-+");
-    cr_assert_str_eq(rev, "+-+-+-+-+-+-+-");
+    cr_assert_str_eq(my_revstr(rev), "+-+-+-+-+-+-+-");
+    cr_assert_eq(rev, my_revstr(rev));
 }
 
 Test(my_revstr, epty_string)
 {
-    char *str = "";
+    char str[] = "";
 
     cr_assert_str_empty(my_revstr(str));
+    cr_assert_eq(str, my_revstr(str));
 }
 
 Test(my_revstr, even_string)
 {
-    cr_assert_str_eq(my_revstr("salut"), "tulas");
+    char str[] = "salut";
+
+    cr_assert_str_eq(my_revstr(str), "tulas");
+    cr_assert_eq(str, my_revstr(str));
 }

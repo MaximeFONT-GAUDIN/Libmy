@@ -10,22 +10,40 @@
 
 Test(my_strcapitalize, unique_world)
 {
-    char *str = "bonjour";
+    char str[] = "bonjour";
 
     cr_assert_str_eq(my_strcapitalize(str), "Bonjour");
+    cr_assert_eq(str, my_strcapitalize(str));
 }
 
 Test(my_strcapitalize, multi_world)
 {
-    cr_assert_str_eq(my_strcapitalize("bonjour je test mes programmes"), "Bonjour Je Test Mes Programmes");
+    char str[] = "bonjour je test mes programmes";
+
+    cr_assert_str_eq(my_strcapitalize(str), "Bonjour Je Test Mes Programmes");
+    cr_assert_eq(str, my_strcapitalize(str));
 }
 
 Test(my_strcapitalize, nbr_into_world)
 {
-    cr_assert_str_eq(my_strcapitalize("bonjour 43il y a des56chiffres ici"), "Bonjour 43Il Y A Des56Chiffres Ici");
+    char str[] = "bonjour 43il y a des56chiffres ici";
+
+    cr_assert_str_eq(my_strcapitalize(str), "Bonjour 43Il Y A Des56Chiffres Ici");
+    cr_assert_eq(str, my_strcapitalize(str));
 }
 
 Test(my_strcapitalize, all_upper)
 {
-    cr_assert_str_eq(my_strcapitalize("UNE PHRASE TOUT EN MAJUSCULE"), "UNE PHRASE TOUT EN MAJUSCULE");
+    char str[] = "UNE PHRASE TOUT EN MAJUSCULE";
+
+    cr_assert_str_eq(my_strcapitalize(str), "UNE PHRASE TOUT EN MAJUSCULE");
+    cr_assert_eq(str, my_strcapitalize(str));
+}
+
+Test(my_strcapitalize, empty_str)
+{
+    char str[] = "";
+
+    cr_assert_str_eq(my_strcapitalize(str), "");
+    cr_assert_eq(str, my_strcapitalize(str));
 }

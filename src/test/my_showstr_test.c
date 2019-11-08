@@ -39,3 +39,12 @@ Test(my_showstr, only_only_one_char_non_printable)
     my_showstr(str);
     cr_assert_stdout_eq_str("\\1f");
 }
+
+Test(my_showstr, empty_str)
+{
+    char str[] = "";
+
+    cr_redirect_stdout();
+    my_showstr(str);
+    cr_assert_stdout_eq_str("");
+}

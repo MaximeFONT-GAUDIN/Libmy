@@ -9,17 +9,15 @@
 
 char *my_revstr(char *str)
 {
-    int size_str = 0;
-    char *ret;
-    int i = 0;
+    int size = my_strlen(str) - 1;
+    char c;
 
-    for (; str[size_str] != 0; size_str++);
-    ret = malloc(sizeof(char) * size_str + 1);
-    size_str--;
-    for (; str[i] != 0; i++) {
-        ret[i] = str[size_str];
-        size_str--;
+    for (int i = 0; i < size; i++) {
+        c = str[i];
+        str[i] = str[size];
+        str[size] = c;
+        size--;
     }
-    ret[i] = 0;
-    return (ret);
+
+    return (str);
 }

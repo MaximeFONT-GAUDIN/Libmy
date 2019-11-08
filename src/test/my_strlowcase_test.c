@@ -10,20 +10,28 @@
 
 Test(my_strlowcase, all_lowcase)
 {
-    cr_assert_str_eq(my_strlowcase("JECRISENMINUSCULE"), "jecrisenminuscule");
+    char str[] = "JECRISENMINUSCULE";
+    cr_assert_str_eq(my_strlowcase(str), "jecrisenminuscule");
+    cr_assert_eq(str, my_strlowcase(str));
 }
 
 Test(my_strlowcase, sentence)
 {
-    cr_assert_str_eq(my_strlowcase("J'ECRIS UNE PHRASE"), "j'ecris une phrase");
+    char str[] = "J'ECRIS UNE PHRASE";
+    cr_assert_str_eq(my_strlowcase(str), "j'ecris une phrase");
+    cr_assert_eq(str, my_strlowcase(str));
 }
 
 Test(my_strlowcase, with_nbr)
 {
-    cr_assert_str_eq(my_strlowcase("1 PHRASE AVEC DES CH1FFRES"), "1 phrase avec des ch1ffres");
+    char str[] = "1 PHRASE AVEC DES CH1FFRES";
+    cr_assert_str_eq(my_strlowcase(str), "1 phrase avec des ch1ffres");
+    cr_assert_eq(str, my_strlowcase(str));
 }
 
 Test(my_strlowcase, with_upcase)
 {
-    cr_assert_str_eq(my_strlowcase("une PhRase AVeC DEs MaJusCuLEs"), "une phrase avec des majuscules");
+    char str[] = "une PhRase AVeC DEs MaJusCuLEs";
+    cr_assert_str_eq(my_strlowcase(str), "une phrase avec des majuscules");
+    cr_assert_eq(str, my_strlowcase(str));
 }
