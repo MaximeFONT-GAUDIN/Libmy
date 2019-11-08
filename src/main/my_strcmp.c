@@ -15,11 +15,13 @@ int my_strcmp(char *str1, char *str2)
         if (str1[i] - str2[i] == 0)
             continue;
         if (str1[i] - str2[i] < 0)
-            return (-1);
+            return (str1[i] - str2[i]);
         if (str1[i] - str2[i] > 0)
-            return (1);
+            return (str1[i] - str2[i]);
     }
     if (str1[i] == 0 && str2[i] != 0)
-        return (1);
+        return (str1[i] - str2[i]);
+    if (str2[i] == 0 && str1[i] != 0)
+        return (str1[i]);
     return (0);
 }

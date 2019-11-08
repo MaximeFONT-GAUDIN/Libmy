@@ -17,8 +17,8 @@ Test(my_strcmp, the_same)
 
 Test(my_strcmp, lower_than)
 {
-    char *str2 = "Hello";
     char *str3 = "World";
+    char *str2 = "Hello";
 
     cr_assert_lt(my_strcmp(str2, str3), 0);
 }
@@ -41,8 +41,29 @@ Test(my_strcmp, str1_contain_str2)
 
 Test(my_strcmp, str2_contain_str1)
 {
-    char *str2 = "HelloWorld";
     char *str1 = "Hello";
+    char *str2 = "HelloWorld";
+
+    cr_assert_lt(my_strcmp(str1, str2), 0);
+}
+
+Test(my_strcmp, str1_empty)
+{
+    char *str1 = "";
+    char *str2 = "find";
+
+    cr_assert_lt(my_strcmp(str1, str2), 0);
+}
+
+Test(my_strcmp, str2_empty)
+{
+    char *str1 = "find";
+    char *str2 = "";
 
     cr_assert_gt(my_strcmp(str1, str2), 0);
+}
+
+Test(my_strcmp, all_empty)
+{
+    cr_assert_eq(my_strcmp("", ""), 0);
 }
