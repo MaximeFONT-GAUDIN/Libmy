@@ -21,7 +21,7 @@ Test(my_getnbr,get_minus42)
 
 Test(my_getnbr, get_nothing)
 {
-    cr_assert_eq(my_getnbr(""), NULL);
+    cr_assert_eq(my_getnbr(""), 0);
 }
 
 Test(my_getnbr, multi_minus)
