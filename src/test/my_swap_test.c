@@ -8,20 +8,20 @@
 #include "my_test.h"
 #include <criterion/criterion.h>
 
-Test(my_swap, swap_correctly_two_char)
+Test(my_swap, swap_correctly_two_int)
 {
-    char c1 = 'b';
-    char c2 = 'a';
+    int c1 = 3;
+    int c2 = 6;
 
     my_swap(&c1, &c2);
-    cr_assert(c2 == 'b' && c1 == 'a');
+    cr_assert(c2 == 3 && c1 == 6);
 }
 
-Test(my_swap, swap_two_charv2)
+Test(my_swap, swap_two_intv2)
 {
-    char c1 = ' ';
-    char c2 = 0;
+    int c1 = 5;
+    int c2 = 0;
 
     my_swap(&c1, &c2);
-    cr_assert(c2 == ' ' && c1 == 0);
+    cr_assert(c2 == 5 && c1 == 0);
 }

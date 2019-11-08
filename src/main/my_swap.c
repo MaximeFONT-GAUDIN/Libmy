@@ -7,9 +7,9 @@
 
 #include "my.h"
 
-void my_swap(char *c1, char *c2)
+void my_swap(int *c1, int *c2)
 {
-    char tmp;
+    int tmp;
 
     tmp = *c1;
     *c1 = *c2;

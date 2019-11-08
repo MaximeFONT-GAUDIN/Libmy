@@ -1,6 +1,0 @@
-void my_sort_int_array(int *tab, size);
-int my_compute_power_rec(int nb, int power);
-int my_compute_square_root(int nb);
-char *my_strcapitalize(char *str);
-int my_showstr(char *str);
-int my_showmem(char *str, int size);
