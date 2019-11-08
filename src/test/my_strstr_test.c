@@ -55,3 +55,11 @@ Test(my_strstr, occurence_is_the_last)
 
     cr_assert_eq(r, str + 65);
 }
+
+Test(my_strstr, find_empty_string)
+{
+    char *str = "on va charcher une empty string ici";
+    char *r = my_strstr(str, "");
+
+    cr_assert_eq(r, NULL);
+}

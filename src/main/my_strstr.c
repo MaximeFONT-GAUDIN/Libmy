@@ -12,6 +12,8 @@ char *my_strstr(char *str, char *oc)
     int i = 0;
     int save_position = -1;
 
+    if (oc == NULL)
+        return (NULL);
     for (; str[i] != 0; i++) {
         if (str[i] == oc[0]){
             save_position = my_strncmp(str + i, oc, my_strlen(oc));
