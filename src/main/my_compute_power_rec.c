@@ -5,6 +5,7 @@
 ** my_compute_power_rec.c
 */
 
+// nb^n = nb(nb^n-1)
 #include "my.h"
 
 int my_compute_power_rec(int nb, int p)

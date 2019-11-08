@@ -22,3 +22,8 @@ Test(my_compute_power_rec, zero)
 {
     cr_assert_eq(my_compute_power_rec(3, 0), 1);
 }
+
+// Test(my_compute_power_rec, big_power)
+// {
+//     cr_assert_eq(my_compute_power_rec(123, 456), 0);
+// }
