@@ -15,6 +15,7 @@ Test(my_strcpy, in_allocated_string)
 
     my_strcpy(dest, src);
     cr_assert_str_eq(dest, "Hello World");
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
 
 Test(my_strcpy, cpy_in_bigger_container)
@@ -24,6 +25,7 @@ Test(my_strcpy, cpy_in_bigger_container)
 
     my_strcpy(dest, src);
     cr_assert_str_eq(dest, "Bonjour Monde");
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
 
 Test(my_strcpy, pointer_return)
@@ -33,6 +35,7 @@ Test(my_strcpy, pointer_return)
     char *r = my_strcpy(dest, src);
 
     cr_assert_eq(r, dest);
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
 
 Test(my_strcpy, empty_string)
@@ -42,9 +45,8 @@ Test(my_strcpy, empty_string)
     
     my_strcpy(dest, src);
     cr_assert_str_empty(dest);
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
-
-
 
 Test(my_strcpy, in_allocated_string_non_empty_string)
 {
@@ -53,6 +55,7 @@ Test(my_strcpy, in_allocated_string_non_empty_string)
 
     my_strcpy(dest, src);
     cr_assert_str_eq(dest, "Hello World");
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
 
 Test(my_strcpy, cpy_in_bigger_container_non_empty_string)
@@ -62,6 +65,7 @@ Test(my_strcpy, cpy_in_bigger_container_non_empty_string)
 
     my_strcpy(dest, src);
     cr_assert_str_eq(dest, "Bonjour Monde");
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
 
 Test(my_strcpy, pointer_return_non_empty_string)
@@ -71,6 +75,7 @@ Test(my_strcpy, pointer_return_non_empty_string)
     char *r = my_strcpy(dest, src);
 
     cr_assert_eq(r, dest);
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
 
 Test(my_strcpy, empty_string_non_empty_string)
@@ -80,4 +85,5 @@ Test(my_strcpy, empty_string_non_empty_string)
     
     my_strcpy(dest, src);
     cr_assert_str_empty(dest);
+    cr_assert_eq(dest, my_strcpy(dest, src));
 }
