@@ -27,3 +27,8 @@ Test(my_strupcase, with_upcase)
 {
     cr_assert_str_eq(my_strupcase("Une Phrase aVec dES mAJUSCULEs"), "UNE PHRASE AVEC DES MAJUSCULES");
 }
+
+Test(my_strupcase, empty_string)
+{
+    cr_assert_str_eq(my_strupcase(""), "");
+}
