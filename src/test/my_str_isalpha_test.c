@@ -35,5 +35,5 @@ Test(my_str_isalpha, with_nbr)
 
 Test(my_str_isalpha, empty_str)
 {
-    cr_assert_eq(my_str_isalpha(""), 0);
+    cr_assert_eq(my_str_isalpha(""), 1);
 }

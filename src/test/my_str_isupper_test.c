@@ -35,5 +35,5 @@ Test(my_str_isupper, with_nbr)
 
 Test(my_str_isupper, empty_str)
 {
-    cr_assert_eq(my_str_isupper(""), 0);
+    cr_assert_eq(my_str_isupper(""), 1);
 }

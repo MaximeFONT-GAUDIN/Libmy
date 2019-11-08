@@ -25,5 +25,5 @@ Test(my_str_isnum, digit_and_alpha)
 
 Test(my_str_isnum, empty_str)
 {
-    cr_assert_eq(my_str_isnum(""), 0);
+    cr_assert_eq(my_str_isnum(""), 1);
 }
