@@ -6,6 +6,7 @@
 */
 
 #include "my_test.h"
+#include <limits.h>
 #include <criterion/criterion.h>
 
 Test(my_swap, swap_correctly_two_int)
@@ -24,4 +25,13 @@ Test(my_swap, swap_two_intv2)
 
     my_swap(&c1, &c2);
     cr_assert(c2 == 5 && c1 == 0);
+}
+
+Test(my_swap, max_min)
+{
+    int c1 = INT_MAX;
+    int c2 = INT_MIN;
+
+    my_swap(&c1, &c2);
+    cr_assert(c2 == INT_MAX && c1 == INT_MIN);
 }
