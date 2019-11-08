@@ -6,6 +6,7 @@
 */
 
 #include "my_test.h"
+#include <limits.h>
 #include <criterion/criterion.h>
 
 Test(my_find_prime_sup, prime)
@@ -21,4 +22,14 @@ Test(my_find_prime_sup, no_prime)
 Test(my_find_prime_sup, negativ)
 {
     cr_assert_eq(my_find_prime_sup(-5), 0);
+}
+
+Test(my_find_prime_sup, one)
+{
+    cr_assert_eq(my_find_prime_sup(1), 2);
+}
+
+Test(my_find_prime_sup, max_int)
+{
+    cr_assert_eq(my_find_prime_sup(INT_MAX - 1), INT_MAX);
 }

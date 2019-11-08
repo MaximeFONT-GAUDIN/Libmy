@@ -9,7 +9,7 @@
 
 int my_find_prime_sup(int nb)
 {
-    if (nb <= 1)
+    if (nb <= 0)
         return (0);
     if (my_is_prime(nb) == 1)
         return (nb);
