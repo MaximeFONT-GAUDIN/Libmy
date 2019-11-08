@@ -11,6 +11,11 @@ char *my_strncpy(char *str1, char *str2, int nb)
 {
     int i = 0;
 
+    if (nb <= 0) {
+        for (int i = 0; str2[i] != 0; i++)
+            str2[i] = 0;
+        return (str2);
+    }
     for (;str1[i] != 0 && i < nb; i++) {
         str2[i] = str1[i];
     }

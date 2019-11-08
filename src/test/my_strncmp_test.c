@@ -32,3 +32,36 @@ Test(My_strncmp, str1_small_5char)
 {
     cr_assert_eq(my_strncmp("HelloWorld", "Hello", 5), 0);
 }
+
+
+
+
+Test(My_strncmp, str1_empty)
+{
+    cr_assert_lt(my_strncmp("", "Hello", 5), 0);
+}
+
+Test(My_strncmp, str2_empty)
+{
+    cr_assert_gt(my_strncmp("HelloWorld", "", 5), 0);
+}
+
+Test(My_strncmp, nb_empty)
+{
+    cr_assert_eq(my_strncmp("HelloWorld", "Hello", 0), 0);
+}
+
+Test(My_strncmp, nb_empty_str1_empty)
+{
+    cr_assert_eq(my_strncmp("", "Hello", 0), 0);
+}
+
+Test(My_strncmp, nb_empty_str2_empty)
+{
+    cr_assert_eq(my_strncmp("HelloWorld", "", 0), 0);
+}
+
+Test(My_strncmp, str1_and_str2_and_nb_empty)
+{
+    cr_assert_eq(my_strncmp("", "", 0), 0);
+}

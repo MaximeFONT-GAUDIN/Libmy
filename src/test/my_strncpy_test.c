@@ -65,3 +65,43 @@ Test(my_strncpy, empty_string_non_empty_string)
     my_strncpy(str1, str2, nb);
     cr_assert_str_empty(str2);
 }
+
+Test(my_strncpy, non_empty_strinf_empty_string)
+{
+    char *str1 = "une phrase quelconque que je pause la";
+    char str2[4] = "";
+    int nb = 3;
+
+    my_strncpy(str1, str2, nb);
+    cr_assert_str_eq(str2, "une");
+}
+
+Test(my_strncpy, empty_nb)
+{
+    char *str1 = "une phrase pour les tester tous";
+    char str2[34] = "une autre pour voir ce que ca fait";
+    int nb = 0;
+
+    my_strncpy(str1, str2, nb);
+    cr_assert_str_empty(str2);
+}
+
+Test(my_strncpy, all_str_empty)
+{
+    char *str1 = "";
+    char str2[4] = "";
+    int nb = 2;
+
+    my_strncpy(str1, str2, nb);
+    cr_assert_str_empty(str2);
+}
+
+Test(my_strncpy, all_empty)
+{
+    char *str1 = "";
+    char str2[0] = "";
+    int nb = 0;
+
+    my_strncpy(str1, str2, nb);
+    cr_assert_str_empty(str2);
+}
