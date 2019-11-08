@@ -34,3 +34,12 @@ Test(my_sort_int_array, dirty_array)
     my_sort_int_array(array, 5);
     cr_assert_arr_eq(array, test, 0);
 }
+
+Test(my_sort_int_array, empty_array)
+{
+    int array[0];
+    int test[0];
+
+    my_sort_int_array(array, 0);
+    cr_assert_arr_eq(array, test, 0);
+}
