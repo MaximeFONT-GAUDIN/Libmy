@@ -43,8 +43,9 @@ Test(my_showstr, only_only_one_char_non_printable)
 Test(my_showstr, empty_str)
 {
     char str[] = "";
+    Char *test = "";
 
     cr_redirect_stdout();
     my_showstr(str);
-    cr_assert_stdout_eq_str(NULL);
+    cr_assert_stdout_eq_str(test);
 }
