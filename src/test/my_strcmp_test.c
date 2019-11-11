@@ -63,6 +63,11 @@ Test(my_strcmp, str2_empty)
     cr_assert_gt(my_strcmp(str1, str2), 0);
 }
 
+// Test(my_strcmp, str2_zero)
+// {
+
+// }
+
 Test(my_strcmp, all_empty)
 {
     cr_assert_eq(my_strcmp("", ""), 0);
