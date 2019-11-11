@@ -12,7 +12,7 @@ char *my_strstr(char *str, char *oc)
     int i = 0;
     int save_position = -1;
 
-    if (oc == NULL)
+    if (oc == 0)
         return (NULL);
     for (; str[i] != 0; i++) {
         if (str[i] == oc[0]){
