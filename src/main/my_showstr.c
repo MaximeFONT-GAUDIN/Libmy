@@ -9,7 +9,7 @@
 
 int my_showstr(char *str)
 {
-    if (str == 0)
+    if (str == NULL)
         return (0);
     for (int i = 0; str[i] != 0; i++) {
         if (my_alphaisprint(str[i]) == 0)
