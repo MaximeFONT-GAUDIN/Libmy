@@ -64,3 +64,10 @@ Test(my_put_nbr_base, neq_in_10_out_20_nb_1000)
     my_put_nbr_base(-1000,"0123456789ABCDEFGHIJ");
     cr_assert_stdout_eq_str("-2A0");
 }
+
+Test(my_put_nbr_base, zero_base_two)
+{
+    cr_redirect_stdout();
+    my_put_nbr_base(0, "01");
+    cr_assert_stdout_eq_str("0");
+}

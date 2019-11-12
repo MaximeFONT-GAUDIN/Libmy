@@ -15,9 +15,7 @@ void my_put_nbr_base(int nb, char *base)
         nb = nb * - 1;
         my_putchar('-');
     }
-    if (nb == 0)
-        return;
-    else
+    if (nb >= size_base)
         my_put_nbr_base(nb / size_base, base);
     my_putchar(base[nb % size_base]);
 }
