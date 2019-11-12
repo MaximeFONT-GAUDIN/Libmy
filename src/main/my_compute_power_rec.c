@@ -19,8 +19,6 @@ int my_compute_power_rec(int nb, int p)
         if (result / nb != save)
             return (0);
     }
-    if (p < 0)
-        return (0);
     if (p == 0)
         return (1);
     else {
