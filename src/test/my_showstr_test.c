@@ -45,7 +45,4 @@ Test(my_showstr, empty_str)
     char str[] = "";
 
     cr_assert_eq(my_showstr(str), 0);
-    // cr_redirect_stdout();
-    // my_showstr(str);
-    // cr_assert_stdout_eq_str(test);
 }
