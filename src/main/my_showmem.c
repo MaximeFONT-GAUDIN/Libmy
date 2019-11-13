@@ -110,8 +110,8 @@ int my_showmem(char *str, int size)
     return (0);
 }
 
-// int main(void)
-// {
-//     my_showmem("une chaine de caractere", 16);
-//     return 0;
-// }
+int main(void)
+{
+    my_showmem("une chaine de caractere", 16);
+    return 0;
+}
