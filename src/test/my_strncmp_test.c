@@ -65,3 +65,8 @@ Test(My_strncmp, str1_and_str2_and_nb_empty)
 {
     cr_assert_eq(my_strncmp("", "", 0), 0);
 }
+
+Test(my_strncmp, WW10)
+{
+    cr_assert_eq(my_strncmp("world", "world", 10), 0);
+}

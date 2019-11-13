@@ -12,6 +12,8 @@ int my_compute_power_rec(int nb, int p)
     int result = nb;
     int save = result;
 
+    if (nb == 0)
+        return (0);
     for (int i = 0; i != p; i++) {
         save = result;
         result = result * nb;

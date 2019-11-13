@@ -50,7 +50,7 @@ char *my_put_nbr_base_it(int nb, char *base)
 void print_left_column(int i)
 {
     my_putstr(my_put_nbr_base_it(i, "0123456789abcdef"));
-    my_putstr(":  ");
+    my_putstr(": ");
 }
 
 void print_middle_column(char *str, int size)
@@ -110,8 +110,9 @@ int my_showmem(char *str, int size)
     return (0);
 }
 
-int main(void)
-{
-    my_showmem("une chaine de caractere", 16);
-    return 0;
-}
+// int main(void)
+// {
+//     char *str = "\xff" "é une chaine de caractere";
+//     my_showmem(str, 16);
+//     return 0;
+// }

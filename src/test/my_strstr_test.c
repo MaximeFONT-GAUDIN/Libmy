@@ -61,13 +61,5 @@ Test(my_strstr, find_empty_string)
     char *str = "on va charcher une empty string ici";
     char *r = my_strstr(str, "");
 
-    cr_assert_eq(r, NULL);
-}
-
-Test(my_strstr, find_NULL_string)
-{
-    char *str = "on va charcher une empty string ici";
-    char *r = my_strstr(str, NULL);
-
-    cr_assert_eq(r, NULL);
+    cr_assert_eq(r, str);
 }

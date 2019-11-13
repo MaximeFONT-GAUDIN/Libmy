@@ -115,3 +115,14 @@ Test(my_strncpy, all_empty)
     cr_assert_str_empty(str2);
     cr_assert_eq(str2, my_strncpy(str2, str1, nb));
 }
+
+Test(my_strncpy, negativ_nb)
+{
+    char *str1 = "un caractere";
+    char str2[15] = "";
+    int nb = -2;
+
+    my_strncpy(str2, str1, nb);
+    cr_assert_str_empty(str2);
+    cr_assert_eq(str2, my_strncpy(str2, str1, nb));
+}

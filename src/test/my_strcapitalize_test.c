@@ -47,3 +47,11 @@ Test(my_strcapitalize, empty_str)
     cr_assert_str_eq(my_strcapitalize(str), "");
     cr_assert_eq(str, my_strcapitalize(str));
 }
+
+Test(my_strcapitalize, nimp)
+{
+    char str[] = "HeLlo wORld, how are you?";
+
+    cr_assert_str_eq(my_strcapitalize(str), "HeLlo WORld, How Are You?");
+    cr_assert_eq(str, my_strcapitalize(str));
+}
