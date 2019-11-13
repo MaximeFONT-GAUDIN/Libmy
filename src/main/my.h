@@ -38,7 +38,7 @@ char *my_strrchr(char *str, char c);
 char *my_strstr(char *str, char *oc);
 char *my_strcapitalize(char *str);
 int my_showstr(char *str);
-void my_put_nbr_base(int nb, char *base);
+int my_put_nbr_base(int nb, char *base);
 int my_showmem(char *str, int size);
 char *my_strupcase(char *str);
 char *my_strlowcase(char *str);

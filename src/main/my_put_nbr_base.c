@@ -7,10 +7,12 @@
 
 #include "my.h"
 
-void my_put_nbr_base(int nb, char *base)
+int my_put_nbr_base(int nb, char *base)
 {
     int size_base = my_strlen(base);
 
+    if (size_base < 2)
+        return (0);
     if (nb < 0) {
         nb = nb * - 1;
         my_putchar('-');
@@ -18,4 +20,5 @@ void my_put_nbr_base(int nb, char *base)
     if (nb >= size_base)
         my_put_nbr_base(nb / size_base, base);
     my_putchar(base[nb % size_base]);
+    return (0);
 }

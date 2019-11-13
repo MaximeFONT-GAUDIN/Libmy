@@ -71,3 +71,13 @@ Test(my_put_nbr_base, zero_base_two)
     my_put_nbr_base(0, "01");
     cr_assert_stdout_eq_str("0");
 }
+
+Test(my_put_nbr_base, no_base)
+{
+    cr_assert_eq(my_put_nbr_base(0, "1"),0);
+}
+
+Test(my_put_nbr_base, null_base)
+{
+    cr_assert_eq(my_put_nbr_base(0, ""), 0);
+}

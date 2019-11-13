@@ -35,7 +35,7 @@ Test(my_str_isprintable, with_nbr)
 
 Test(my_str_isprintable, empty_str)
 {
-    cr_assert_eq(my_str_isprintable(""), 1);
+    cr_assert_eq(my_str_isprintable(""), 0);
 }
 
 Test(my_str_isprintable, non_printable)
