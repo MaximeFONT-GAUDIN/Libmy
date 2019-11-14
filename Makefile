@@ -1,36 +1,18 @@
-OPEN		=	open
-CC			=	gcc
-RM			=	rm -rf
-
-CFLAGS		=	-W -Wall -Wextra -Werror
-CPPFLAGS	=	
-
-TARGET		=	libFunC.a
-
-SRC			=	$(wildcard src/main/*.c)
-OBJ			=	$(SRC:.c=.o)
-
-TEST_SRC	=	$(wildcard src/test/*.c)
-TEST_OBJ	=	$(TEST_SRC:.c=.o)
-
-all			:	$(TARGET)
-
-$(TARGET)	:	$(OBJ)
-				$(AR) rsc $@ $^
+all			:	
+				make -C ./lib/my
 
 clean		:
-				$(RM) $(OBJ)
-				$(RM) *.gcda *.gcno *.gcov *.info
+				make -C ./lib/my clean
+				make -C ./tests clean
 
 fclean		:	clean
-				$(RM) $(TARGET)
-				$(RM) tests report
+				make -C ./lib/my fclean
+				make -C ./tests fclean
 
 re			:	fclean all
 
-test		:	$(SRC) $(TEST_SRC)
-				$(CC) -fprofile-arcs -ftest-coverage -Isrc/main -DMOCKING $(CFLAGS) $(CPPFLAGS) $(shell pkg-config --libs --cflags criterion) $^ -o tests
-				./tests
+test		:
+				make -C ./tests all
 
 report		:	test
 				lcov --capture --initial --directory . --output-file coverage_base.info
