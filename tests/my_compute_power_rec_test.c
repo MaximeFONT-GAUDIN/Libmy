@@ -35,5 +35,5 @@ Test(my_compute_power_rec, nb_zero)
 
 Test(my_compute_power_rec, p_zero)
 {
-    cr_assert_eq(my_compute_power_rec(0, 0), 0);
+    cr_assert_eq(my_compute_power_rec(0, 0), 1);
 }

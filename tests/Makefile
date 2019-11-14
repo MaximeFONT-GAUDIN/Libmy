@@ -47,53 +47,53 @@ SRC_TEST	=	my_alphaisalpha_test.c			\
 				my_strupcase_test.c				\
 				my_swap_test.c					\
 
-SRC	=	../lib/my/my_alphaisalpha.c			\
-		../lib/my/my_alphaislower.c			\
+SRC	=	../lib/my/my_alphaisalpha.c				\
+		../lib/my/my_alphaislower.c				\
 		../lib/my/my_alphaisnum.c				\
-		../lib/my/my_alphaisprint.c			\
-		../lib/my/my_alphaisupper.c			\
-		../lib/my/my_alphatolower.c			\
-		../lib/my/my_alphatoupper.c			\
+		../lib/my/my_alphaisprint.c				\
+		../lib/my/my_alphaisupper.c				\
+		../lib/my/my_alphatolower.c				\
+		../lib/my/my_alphatoupper.c				\
 		../lib/my/my_compute_power_rec.c		\
-		../lib/my/my_compute_square_root.c	\
+		../lib/my/my_compute_square_root.c		\
 		../lib/my/my_find_prime_sup.c			\
 		../lib/my/my_getnbr.c					\
 		../lib/my/my_isneg.c					\
-		../lib/my/my_is_prime.c				\
-		../lib/my/my_putchar.c				\
-		../lib/my/my_put_nbr_base.c			\
-		../lib/my/my_put_nbr.c				\
+		../lib/my/my_is_prime.c					\
+		../lib/my/my_putchar.c					\
+		../lib/my/my_put_nbr_base.c				\
+		../lib/my/my_put_nbr.c					\
 		../lib/my/my_putstr.c					\
 		../lib/my/my_revstr.c					\
-		../lib/my/my_showmem.c				\
-		../lib/my/my_showstr.c				\
+		../lib/my/my_showmem.c					\
+		../lib/my/my_showstr.c					\
 		../lib/my/my_sort_int_array.c			\
 		../lib/my/my_strcapitalize.c			\
 		../lib/my/my_strcat.c					\
 		../lib/my/my_strchr.c					\
 		../lib/my/my_strcmp.c					\
 		../lib/my/my_strcpy.c					\
-		../lib/my/my_str_isalpha.c			\
-		../lib/my/my_str_islower.c			\
+		../lib/my/my_str_isalpha.c				\
+		../lib/my/my_str_islower.c				\
 		../lib/my/my_str_isnum.c				\
-		../lib/my/my_str_isprintable.c		\
-		../lib/my/my_str_isupper.c			\
+		../lib/my/my_str_isprintable.c			\
+		../lib/my/my_str_isupper.c				\
 		../lib/my/my_strlen.c					\
 		../lib/my/my_strlowcase.c				\
-		../lib/my/my_strncat.c				\
-		../lib/my/my_strncmp.c				\
-		../lib/my/my_strncpy.c				\
-		../lib/my/my_strrchr.c				\
+		../lib/my/my_strncat.c					\
+		../lib/my/my_strncmp.c					\
+		../lib/my/my_strncpy.c					\
+		../lib/my/my_strrchr.c					\
 		../lib/my/my_strstr.c					\
 		../lib/my/my_strtowordarray.c			\
 		../lib/my/my_strupcase.c				\
-		../lib/my/my_swap.c					\
+		../lib/my/my_swap.c						\
 
 OBJ	=	$(SRC:.c=.o)
 
 CC	=	gcc
 
-CFLAGS	=	-W -Wall -Wextra -Werror
+CFLAGS	=	-W -Wall -Wextra -Werror -fstack-protector -fstack-protector-all -fstack-protector-strong -Wstack-protector
 
 all:	$(SRC) $(SRC_TEST)
 		$(CC) -fprofile-arcs -ftest-coverage -Isrc/main -DMOCKING $(CFLAGS) $(shell pkg-config --libs --cflags criterion) $^ -o tests

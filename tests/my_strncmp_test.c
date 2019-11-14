@@ -70,3 +70,8 @@ Test(my_strncmp, WW10)
 {
     cr_assert_eq(my_strncmp("world", "world", 10), 0);
 }
+
+Test(my_strncmp, WW10_bis)
+{
+    cr_assert_eq(my_strncmp("marvin", "marvin", 10), 0);
+}

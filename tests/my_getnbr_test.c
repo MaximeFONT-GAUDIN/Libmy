@@ -64,6 +64,11 @@ Test(my_getnbr, int_min)
     cr_assert_eq(my_getnbr("-2147483648"), -2147483648);
 }
 
+Test(my_getnbr, int_max_plus_1)
+{
+    cr_assert_eq(my_getnbr("2147483648"), 0);
+}
+
 Test(my_getnbr, sup_int_max)
 {
     cr_assert_eq(my_getnbr("18446744073709551615"), 0);

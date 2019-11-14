@@ -6,6 +6,7 @@
 */
 
 #include "../../include/my.h"
+#include <limits.h>
 
 void my_put_nbr(int nbr)
 {
@@ -23,3 +24,9 @@ void my_put_nbr(int nbr)
         my_putchar(print + '0');
     }
 }
+
+// int main(void)
+// {
+//     printf("%d\n", my_put_nbr(INT_MIN));
+//     return 0;
+// }
