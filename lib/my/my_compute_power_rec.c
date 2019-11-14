@@ -9,21 +9,19 @@
 
 int my_compute_power_rec(int nb, int p)
 {
-    int result = nb;
-    int save = result;
+    int nb1, nb2;
 
     if (nb == 0)
         return (0);
-    for (int i = 0; i != p; i++) {
-        save = result;
-        result = result * nb;
-        if (result / nb != save)
-            return (0);
-    }
+        
     if (p == 0)
         return (1);
-    else {
-        p--;
-        return (nb * my_compute_power_rec(nb, p));
-    }
+
+    nb1 = my_compute_power_rec(nb, p - 1);
+    nb2 = nb * nb1;
+
+    if (nb2 / nb != nb1)
+        return (0);
+    
+    return (nb2);
 }
