@@ -11,7 +11,7 @@ fclean		:	clean
 
 re			:	fclean all
 
-test		:
+tests_run		:
 				make -C ./tests all
 
 report		:	test
