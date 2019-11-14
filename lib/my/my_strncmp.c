@@ -15,7 +15,11 @@ int my_strncmp(char *str1, char *str2, int n)
     for (; i != n; i++) {
         difference = str1[i] - str2[i];
         if (difference == 0)
-            continue;
+        {
+            if (str1[i])
+                continue;
+            return (0);
+        }
         else 
             return (difference);
     }
