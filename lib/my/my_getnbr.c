@@ -19,7 +19,9 @@ int my_getnbr(char *str)
             n = n * 10 + (str[i] - '0');
         else if (str[i] >= 'a' && str[i] <= 'z')
             break;
-        if (n > 2147483648)
+        if (n > 2147483647 && nb % 2 != 1)
+            return (0);
+        else if (n > 2147483648 && nb % 2 == 1)
             return (0);
     }
     if (nb % 2 == 1)

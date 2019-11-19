@@ -86,11 +86,11 @@ Test(my_strncpy, non_empty_strinf_empty_string)
 Test(my_strncpy, empty_nb)
 {
     char *str1 = "une phrase pour les tester tous";
-    char str2[34] = "une autre pour voir ce que ca fait";
+    char str2[35] = "une autre pour voir ce que ca fait";
     int nb = 0;
 
     my_strncpy(str2, str1, nb);
-    cr_assert_str_empty(str2);
+    cr_assert_str_eq(str2, "une autre pour voir ce que ca fait");
     cr_assert_eq(str2, my_strncpy(str2, str1, nb));
 }
 

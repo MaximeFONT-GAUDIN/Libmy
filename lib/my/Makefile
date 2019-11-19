@@ -47,12 +47,6 @@ SRC	=	my_alphaisalpha.c			\
 		my_strupcase.c				\
 		my_swap.c					\
 
-CC	=	gcc
-
-CFLAGS	=	-W -Wall -Wextra -Werror 
-
-# CPPFLAGS	=	/*-I./include*/
-
 LDFLAGS	=	-L./lib/my -lmy
 
 OBJ	=	$(SRC:.c=.o)

@@ -14,8 +14,12 @@ char *my_strcapitalize(char *str)
             str[i] = str[i] - 32;
             continue;
         }
-        if ((str[i] >= 97 && str[i] <= 122) && my_alphaisalpha(str[i - 1]) == 1) {
+        if (i != 0 && (str[i] >= 'a' && str[i] <= 'z') && my_alphaisalpha(str[i - 1]) == 1) {
             str[i] = str[i] - 32;
+            continue;
+        }
+        else if (i != 0 && (str[i] >= 'A' && str[i] <= 'Z') && my_alphaisalpha(str[i - 1]) == 0) {
+            str[i] = str[i] + 32;
             continue;
         }
     }

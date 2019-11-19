@@ -9,7 +9,6 @@
 
 char my_alphatolower(char c)
 {
-    // printf("%c\n", c);
     if (c > 64 && c < 91)
         c = c + 32;
     return (c);

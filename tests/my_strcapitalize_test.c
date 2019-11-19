@@ -34,9 +34,9 @@ Test(my_strcapitalize, nbr_into_world)
 
 Test(my_strcapitalize, all_upper)
 {
-    char str[] = "UNE PHRASE TOUT EN MAJUSCULE";
+    char str[] = "UNE PHRASE TOUT EN MAJU-SCULE";
 
-    cr_assert_str_eq(my_strcapitalize(str), "UNE PHRASE TOUT EN MAJUSCULE");
+    cr_assert_str_eq(my_strcapitalize(str), "Une Phrase Tout En Maju-Scule");
     cr_assert_eq(str, my_strcapitalize(str));
 }
 
@@ -52,6 +52,6 @@ Test(my_strcapitalize, nimp)
 {
     char str[] = "HeLlo wORld, how are you?";
 
-    cr_assert_str_eq(my_strcapitalize(str), "HeLlo WORld, How Are You?");
+    cr_assert_str_eq(my_strcapitalize(str), "Hello World, How Are You?");
     cr_assert_eq(str, my_strcapitalize(str));
 }
