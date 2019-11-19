@@ -46,6 +46,8 @@ SRC	=	my_alphaisalpha.c			\
 		my_strtowordarray.c			\
 		my_strupcase.c				\
 		my_swap.c					\
+		my_strdup.c					\
+		my_strndup.c				\
 
 LDFLAGS	=	-L./lib/my -lmy
 

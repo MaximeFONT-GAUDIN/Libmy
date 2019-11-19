@@ -3,3 +3,4 @@
 *.gcda
 libmy.a
 default.profraw
+a.out
