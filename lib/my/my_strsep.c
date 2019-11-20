@@ -7,20 +7,23 @@
 
 #include "../../include/my.h"
 
-// char *my_strsep(char **stringp, char *delim)
-// {
-//     if (*stringp == NULL)
-//         return (NULL);
+int check_delim(char *delim, char c)
+{
+    for (int i = 0; delim[i] != 0; i++)
+        if (c == delim[i])
+            return (0);
+    return (1);
+}
 
-// }
+char *my_strsep(char **stringp, char *delim)
+{
+    int i = 0;
+    char *save = *stringp;
 
-
-// int main(void)
-// {
-//     char str[] = "bonjour je crois que cest une phrase ici mais je suis as sure";
-//     char **tab;
-
-//     tab[0] = *str;
-//     printf("%s\n", strsep(str, " "));
-//     return 0;
-// }
+    if (*stringp == NULL)
+        return (NULL);
+    for (; save[i] != 0 && check_delim(delim, save[i]) != 0; i++);
+    save[i] = 0;
+    *stringp = *stringp + (i + 1);
+    return (save);
+}

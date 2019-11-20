@@ -48,6 +48,7 @@ SRC_TEST	=	my_alphaisalpha_test.c			\
 				my_swap_test.c					\
 				my_strdup_test.c				\
 				my_strndup_test.c				\
+				my_strsep_test.c				\
 
 SRC	=	../lib/my/my_alphaisalpha.c				\
 		../lib/my/my_alphaislower.c				\
@@ -92,6 +93,7 @@ SRC	=	../lib/my/my_alphaisalpha.c				\
 		../lib/my/my_swap.c						\
 		../lib/my/my_strdup.c					\
 		../lib/my/my_strndup.c					\
+		../lib/my/my_strsep.c					\
 
 OBJ	=	$(SRC:.c=.o)
 

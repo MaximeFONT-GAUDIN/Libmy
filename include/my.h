@@ -56,5 +56,6 @@ int my_compute_square_root(int nb);
 void my_sort_int_array(int *array, int size);
 char *my_strdup(char *str);
 char *my_strndup(char *str, int nb);
+char *my_strsep(char **stringp, char *delim);
 
 #endif

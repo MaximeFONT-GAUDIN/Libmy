@@ -48,6 +48,7 @@ SRC	=	my_alphaisalpha.c			\
 		my_swap.c					\
 		my_strdup.c					\
 		my_strndup.c				\
+		my_strsep.c					\
 
 LDFLAGS	=	-L./lib/my -lmy
 
