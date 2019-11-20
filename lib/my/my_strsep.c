@@ -20,8 +20,13 @@ char *my_strsep(char **stringp, char *delim)
     int i = 0;
     char *save = *stringp;
 
-    if (*stringp == NULL)
+    if (delim[0] == 0) {
+        *stringp = *stringp + (strlen(*stringp) + 1);
+        *stringp = NULL;
         return (NULL);
+    }
+    if (*stringp == NULL)
+        return (*stringp);
     for (; save[i] != 0 && check_delim(delim, save[i]) != 0; i++);
     save[i] = 0;
     *stringp = *stringp + (i + 1);

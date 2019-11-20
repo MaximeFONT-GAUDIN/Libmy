@@ -16,6 +16,28 @@ Test(my_strsep, str_with_simple_delim)
     cr_assert_str_eq(str, "phrase simple");
 }
 
+Test(my_strsep, empty_str_single_delim)
+{
+    char *str = strdup("");
+
+    cr_assert_str_empty(my_strsep(&str, " "));
+}
+
+Test(my_strsep, str_null)
+{
+    char *str = NULL;
+
+    cr_assert_eq(my_strsep(&str, " "), NULL);
+}
+
+Test(my_strsep, empty_delim)
+{
+    char *str = strdup("une phrase pour tester les delim vide");
+
+    cr_assert_eq(my_strsep(&str, ""), NULL);
+    cr_assert_eq(str, NULL);
+}
+
 Test(my_strsep, str_with_multi_delim)
 {
     char *str = strdup("on va utiliser une phrase un peu plus longue pour ce test");
