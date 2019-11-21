@@ -18,6 +18,5 @@ char *my_revstr(char *str)
         str[size] = c;
         size--;
     }
-
     return (str);
 }

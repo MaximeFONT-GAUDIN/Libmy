@@ -112,7 +112,8 @@ int my_showmem(char *str, int size)
 
 // int main(void)
 // {
-//     char *str = /*"\xff"*/ "une tres grande chaine de caracteres qui depasse les 24 sinon ca marche pas";
-//     my_showmem(str, 24);
+//     char str[] = /*"\xff"*/ {112, 101, 116, 105, 116, 101, 32, 112, 104, 114, 97, 115, 101, 0, 0, 0, 1, 4, 2, 3};
+
+//     my_showmem(str, 16);
 //     return 0;
 // }
