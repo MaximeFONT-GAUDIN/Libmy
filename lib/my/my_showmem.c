@@ -11,11 +11,6 @@ int my_put_nbr_base_scd_column(int nb, char *base)
 {
     int size_base = my_strlen(base);
 
-    if (size_base < 2)
-        return (0);
-    if (nb < 0) {
-        nb = nb * - 1;
-    }
     if (nb >= size_base)
         my_put_nbr_base_scd_column(nb / size_base, base);
     my_putchar(base[nb % size_base]);
@@ -30,8 +25,6 @@ char *my_put_nbr_base_it(int nb, char *base)
 
     for (int i = 0; i != 8; i++)
         res[i] = '0';
-    if (size_base < 2)
-        return (NULL);
     for (; nb != 0;) {
         if (nb < size_base) {
             res[j] = base[nb];
