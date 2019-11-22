@@ -5,3 +5,4 @@ libmy.a
 default.profraw
 a.out
 *.info
+tests/tests
