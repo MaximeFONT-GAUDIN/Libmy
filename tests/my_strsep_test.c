@@ -38,7 +38,7 @@ Test(my_strsep, str_with_simple_delim)
     cr_assert_strsep("une", &str, " ");
     cr_assert_strsep("phrase", &str, " ");
     cr_assert_strsep("simple", &str, " ");
-    cr_assert_strsep(NULL, &str, " ");
+    cr_assert_null(str);
     cr_assert_strsep(NULL, &str, " ");
 
     free(ptr);
@@ -50,6 +50,7 @@ Test(my_strsep, empty_str_single_delim)
     char *ptr = str;
 
     cr_assert_strsep(NULL, &str, " ");
+    cr_assert_null(str);
 
     free(ptr);
 }
@@ -67,7 +68,7 @@ Test(my_strsep, empty_delim)
     char *ptr = str;
 
     cr_assert_strsep("une phrase pour tester les delim vide", &str, "");
-    cr_assert_strsep(NULL, &str, "");
+    cr_assert_null(str);
 
     free(ptr);
 }
@@ -96,7 +97,7 @@ Test(my_strsep, str_with_multi_delim_1)
     cr_assert_strsep("", &str, " eh");
     cr_assert_strsep("t", &str, " eh");
     cr_assert_strsep("st", &str, " eh");
-    cr_assert_strsep(NULL, &str, "");
+    cr_assert_null(str);
 
     free(ptr);
 }
@@ -133,7 +134,7 @@ Test(my_strsep, str_with_multi_delim_2)
     cr_assert_strsep("d", &str, " ef");
     cr_assert_strsep("limit", &str, " ef");
     cr_assert_strsep("ur", &str, " ef");
-    cr_assert_strsep(NULL, &str, " ef");
+    cr_assert_null(str);
 
     free(ptr);
 }
