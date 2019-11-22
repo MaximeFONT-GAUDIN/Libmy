@@ -14,7 +14,7 @@ re			:	fclean all
 tests_run		:
 				make -C ./tests all
 
-report		:	test
+report		:	fclean tests_run
 				lcov --capture --initial --directory . --output-file coverage_base.info
 				lcov --capture --directory . --output-file coverage_test.info
 				lcov --add-tracefile coverage_base.info --add-tracefile coverage_test.info --output-file coverage_merge.info

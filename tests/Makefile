@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRC_TEST	=	my_alphaisalpha_test.c			\
+SRC_TEST	=	my_test.c						\
+				my_alphaisalpha_test.c			\
 				my_alphaislower_test.c			\
 				my_alphaisnum_test.c			\
 				my_alphaisprint_test.c			\
@@ -95,14 +96,17 @@ SRC	=	../lib/my/my_alphaisalpha.c				\
 		../lib/my/my_strndup.c					\
 		../lib/my/my_strsep.c					\
 
-OBJ	=	$(SRC:.c=.o)
+OBJ			=	$(SRC:.c=.o)
+OBJ_TEST	=	$(SRC_TEST:.c=.o)
 
-CC	=	gcc
+CC			=	gcc
 
-CFLAGS	=	-W -Wall -Wextra -Werror -fstack-protector -fstack-protector-all -fstack-protector-strong -Wstack-protector
+COVERAGE	=  -fprofile-arcs -ftest-coverage
+CFLAGS		=	-W -Wall -Wextra -Werror -fstack-protector -fstack-protector-all -fstack-protector-strong -Wstack-protector -Dmalloc=my_malloc $(COVERAGE)
+LDFLAGS		= $(shell pkg-config --libs --cflags criterion) $(COVERAGE)
 
-all:	$(SRC) $(SRC_TEST)
-		$(CC) -fprofile-arcs -ftest-coverage -Isrc/main -DMOCKING $(CFLAGS) $(shell pkg-config --libs --cflags criterion) $^ -o tests
+all:	$(OBJ) $(OBJ_TEST)
+		$(CC) $^ -o tests $(LDFLAGS)
 		./tests
 
 clean:

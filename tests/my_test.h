@@ -10,4 +10,7 @@
 
 #include "../include/my.h"
 
+void my_malloc_success();
+void my_malloc_failure();
+
 #endif
