@@ -99,9 +99,9 @@ SRC	=	../lib/my/my_alphaisalpha.c				\
 OBJ			=	$(SRC:.c=.o)
 OBJ_TEST	=	$(SRC_TEST:.c=.o)
 
-CC			=	gcc
+CC			=	clang
 
-COVERAGE	=  -fprofile-arcs -ftest-coverage
+COVERAGE	=  -fprofile-arcs -ftest-coverage -fsanitize=address
 CFLAGS		=	-W -Wall -Wextra -Werror -fstack-protector -fstack-protector-all -fstack-protector-strong -Wstack-protector -Dmalloc=my_malloc $(COVERAGE)
 LDFLAGS		= $(shell pkg-config --libs --cflags criterion) $(COVERAGE)
 
