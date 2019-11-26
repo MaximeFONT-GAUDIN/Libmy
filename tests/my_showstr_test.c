@@ -30,11 +30,10 @@ Test(my_showstr, only_one_char_printable)
     cr_assert_stdout_eq_str("a");
 }
 
-Test(my_showstr, only_only_one_char_non_printable)
+Test(my_showstr, only_one_char_non_printable)
 {
-    char str[2];
+    char str[] = {31, 0};
 
-    str[0] = 31;
     cr_redirect_stdout();
     my_showstr(str);
     cr_assert_stdout_eq_str("\\1f");

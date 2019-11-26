@@ -11,7 +11,7 @@
 Test(my_strcpy, in_allocated_string)
 {
     char *src = "Hello World";
-    char dest[11];
+    char dest[12];
 
     my_strcpy(dest, src);
     cr_assert_str_eq(dest, "Hello World");
@@ -51,7 +51,7 @@ Test(my_strcpy, empty_string)
 Test(my_strcpy, in_allocated_string_non_empty_string)
 {
     char *src = "Hello World";
-    char dest[11] = "hey";
+    char dest[12] = "hey";
 
     my_strcpy(dest, src);
     cr_assert_str_eq(dest, "Hello World");
