@@ -49,14 +49,18 @@ int my_put_nbr_base(int nb, char *base);
 int my_showstr(char *str);
 char *my_strrchr(char *str, char c);
 char *my_strncpy(char *str1, char *str2, int nb);
-// char *my_strdup(char *str);
-// char *my_strncat(char *dest, char *src, int n);
-// int my_strncmp(char *str1, char *str2, int n);
-// char *my_strstr(char *str, char *oc);
+char **my_add_str_to_array(char **array, char *str);
+int my_strlen_tab(char **array);
+char *my_strdup(char *str);
+char *my_strndup(char *str, int nb);
+char *my_strncat(char *dest, char *src, int n);
+int my_strncmp(char *str1, char *str2, int n);
+char *my_strstr(char *str, char *oc);
+void my_sort_int_array(int *array, int size);
+char **my_strtowordarray(char *str, char *separator);
+char *my_strsep(char **stringp, char *delim);
 // int my_showmem(char *str, int size);
-// void my_sort_int_array(int *array, int size);
-// char *my_strndup(char *str, int nb);
-// char *my_strsep(char **stringp, char *delim);
-// char **my_strtowordarray(char *str1, char *separator);
+
+void *my_malloc(size_t size);
 
 #endif

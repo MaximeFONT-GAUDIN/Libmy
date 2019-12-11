@@ -15,6 +15,9 @@ Test(my_strtowordarray, compare_tab)
     char **test = my_strtowordarray("ceci est un tableau", " ");
     
     cr_assert_arr_eq(test, tab, 0);
+    for (int i = 0; test[i] != NULL; i++)
+        free(test[i]);
+    free(test);
 }
 
 Test(my_strtowordarray, tab_with_two_separator)
@@ -23,28 +26,40 @@ Test(my_strtowordarray, tab_with_two_separator)
     char **test = my_strtowordarray("je suis le premier argument", "e ");
     
     cr_assert_arr_eq(test, tab, 0);
+    for (int i = 0; test[i] != NULL; i++)
+        free(test[i]);
+    free(test);
 }
 
 Test(my_strtowordarray, multi_separator_at_start)
 {
-    char tab[3][7] = {"bonjour","le","monde"};
+    char tab[3][7] = {"bonjour", "le", "monde"};
     char **test = my_strtowordarray("          bonjour le monde", " ");
 
     cr_assert_arr_eq(test, tab, 0);
+    for (int i = 0; test[i] != NULL; i++)
+        free(test[i]);
+    free(test);
 }
 
 Test(my_strtowordarray, multi_separator_at_end)
 {
-    char tab[3][7] = {"bonjour","le","monde"};
+    char tab[3][7] = {"bonjour", "le", "monde"};
     char **test = my_strtowordarray("bonjour le monde            ", " ");
 
     cr_assert_arr_eq(test, tab, 0);
+    for (int i = 0; test[i] != NULL; i++)
+        free(test[i]);
+    free(test);
 }
 
 Test(my_strtowordarray, multi_separator_at_start_and_end)
 {
-    char tab[3][7] = {"bonjour","le","monde"};
+    char tab[3][7] = {"bonjour", "le", "monde"};
     char **test = my_strtowordarray("          bonjour le monde            ", " ");
 
     cr_assert_arr_eq(test, tab, 0);
+    for (int i = 0; test[i] != NULL; i++)
+        free(test[i]);
+    free(test);
 }

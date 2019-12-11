@@ -9,7 +9,7 @@
 
 char *my_strlowcase(char *str)
 {
-    // char *ret = malloc(sizeof(char) * (my_strlen(str) + 1));
+    // char *ret = my_malloc(sizeof(char) * (my_strlen(str) + 1));
 
     for (int i = 0; str[i] != 0; i++) {
         if (i == 0 && my_alphaisupper(str[i]) == 0) {

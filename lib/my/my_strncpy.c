@@ -15,8 +15,9 @@ char *my_strncpy(char *str2, char *str1, int nb)
     if (nb > 0) {
         for (; str1[i] != '\0' && i < nb; i++, b++)
             str2[b] = str1[i];
-        for (; b < nb; b++)
+        for (; b < nb - 1; b++)
             str2[b] = 0;
+        str2[b] = 0;
     }
     return (str2);
 }

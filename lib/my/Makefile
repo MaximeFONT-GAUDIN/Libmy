@@ -6,6 +6,7 @@
 ##
 
 SRC	=	my_putchar.c				\
+		my_strndup.c				\
 		my_putstr.c					\
 		my_put_nbr.c				\
 		my_getnbr.c					\
@@ -39,16 +40,16 @@ SRC	=	my_putchar.c				\
 		my_put_nbr_base.c			\
 		my_showstr.c				\
 		my_strrchr.c				\
-		# my_strncpy.c				\
 		my_strdup.c					\
-# 		my_strncmp.c				\
-# 		my_strstr.c					\
-# 		my_strndup.c				\
+		my_strncpy.c				\
+		my_strncat.c				\
+		my_strncmp.c				\
+		my_strstr.c					\
+		my_sort_int_array.c			\
+		my_add_str_to_array.c		\
+		my_strsep.c					\
+		my_strtowordarray.c			\
 # 		my_showmem.c				\
-# 		my_strncat.c				\
-# 		my_strsep.c					\
-# 		my_strtowordarray.c			\
-# 		my_sort_int_array.c			\
 
 LDFLAGS	=	-L./lib/my -lmy
 

@@ -17,18 +17,39 @@ int check_delim(char *delim, char c)
 
 char *my_strsep(char **stringp, char *delim)
 {
-    int i = 0;
     char *save = *stringp;
+    int i = 0;
 
     if (delim[0] == 0) {
-        *stringp = *stringp + (strlen(*stringp) + 1);
-        *stringp = NULL;
+        if (*stringp == NULL) {
+            return (save);
+        }
+        else {
+            *stringp = NULL;
+            return (save);
+        }
+    }
+    if (/**stringp == 0 || */*stringp == NULL) {
         return (NULL);
     }
-    if (*stringp == NULL)
-        return (*stringp);
     for (; save[i] != 0 && check_delim(delim, save[i]) != 0; i++);
+    if (save[i] == 0) {
+        *stringp = NULL;
+        return (save);
+    }
     save[i] = 0;
     *stringp = *stringp + (i + 1);
     return (save);
 }
+
+// int main(void)
+// {
+//     char *str = strdup("une phrase simple");
+//     char *ptr = str;
+
+//     printf("%s\n", my_strsep(&str, " "));
+//     printf("%s\n", my_strsep(&str, " "));
+//     printf("%s\n", my_strsep(&str, " "));
+//     printf("%s\n", my_strsep(&str, " "));
+//     free(ptr);
+// }

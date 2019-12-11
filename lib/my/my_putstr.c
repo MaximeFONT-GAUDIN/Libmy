@@ -9,7 +9,7 @@
 
 void my_putstr(char *str)
 {
-    if (str[0] == 0) {
+    if (str == NULL) {
         my_putchar(0);
         return;
     }

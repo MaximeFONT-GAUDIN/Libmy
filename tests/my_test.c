@@ -4,8 +4,9 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
-static bool success = true;
+bool success = true;
 
 void my_malloc_success()
 {
@@ -23,3 +24,5 @@ void *my_malloc(size_t size)
         return (NULL);
     return (malloc(size));
 }
+
+#define malloc(X) my_malloc(X)

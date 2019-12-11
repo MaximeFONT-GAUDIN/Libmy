@@ -20,7 +20,7 @@ int my_put_nbr_base_scd_column(int nb, char *base)
 char *my_put_nbr_base_it(int nb, char *base)
 {
     int size_base = my_strlen(base);
-    char *res = malloc(8);
+    char *res = my_malloc(8);
     int j = 7;
 
     for (int i = 0; i != 8; i++)

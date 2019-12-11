@@ -6,3 +6,4 @@ default.profraw
 a.out
 *.info
 tests/tests
+*-e

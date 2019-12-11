@@ -11,24 +11,17 @@
 Test(my_strncpy, cpy_5)
 {
     char str1[13] = "Hello World!";
-    char str2[5];
+    char str2[20];
     int nb = 5;
-    char *ret = strdup(my_strncpy(str2, str1, nb));
-    int result = 0;
 
-    if (strncmp(ret, str2, nb) == 0)
-        result = 1;
-    else
-        result = 0;
-    cr_assert_eq(1, result);
-    // cr_assert_str_eq(my_strncpy(str2, str1, nb), "Hello");
     cr_assert_eq(str2, my_strncpy(str2, str1, nb));
+    cr_assert_str_eq(str2, "Hello");
 }
 
 Test(my_strncpy, cpy_5_non_empty_string)
 {
     char *str1 = "Hello World!";
-    char str2[5] = "hey";
+    char str2[10] = "hey";
     int nb = 5;
 
     cr_assert_str_eq(my_strncpy(str2, str1, nb), "Hello");
@@ -131,3 +124,5 @@ Test(my_strncpy, negativ_nb)
     cr_assert_str_empty(str2);
     cr_assert_eq(str2, my_strncpy(str2, str1, nb));
 }
+/*/
+/*/

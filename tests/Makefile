@@ -6,6 +6,9 @@
 ##
 
 SRC_TEST	=	my_putchar_test.c				\
+				my_strndup_test.c				\
+				my_test.c						\
+				my_strncpy_test.c				\
 				my_putstr_test.c				\
 				my_put_nbr_test.c				\
 				my_getnbr_test.c				\
@@ -18,7 +21,6 @@ SRC_TEST	=	my_putchar_test.c				\
 				my_alphatoupper_test.c			\
 				my_compute_power_rec_test.c		\
 				my_compute_square_root_test.c	\
-				my_test.c						\
 				my_isneg_test.c					\
 				my_revstr_test.c				\
 				my_strlen_test.c				\
@@ -40,18 +42,18 @@ SRC_TEST	=	my_putchar_test.c				\
 				my_put_nbr_base_test.c			\
 				my_showstr_test.c				\
 				my_strrchr_test.c				\
-				my_strncpy_test.c				\
-				# my_strndup_test.c				\
-				# my_strdup_test.c				\
-# 				my_strncmp_test.c				\
-# 				my_strstr_test.c				\
+				my_strdup_test.c				\
+				my_strncat_test.c				\
+				my_strncmp_test.c				\
+				my_strstr_test.c				\
+				my_sort_int_array_test.c		\
+				my_add_str_to_array_test.c		\
+				my_strsep_test.c				\
+				my_strtowordarray_test.c		\
 # 				my_showmem_test.c				\
-# 				my_strncat_test.c				\
-# 				my_strsep_test.c				\
-# 				my_strtowordarray_test.c		\
-# 				my_sort_int_array_test.c		\
 
 SRC	=	../lib/my/my_putchar.c					\
+		../lib/my/my_strndup.c					\
 		../lib/my/my_putstr.c					\
 		../lib/my/my_put_nbr.c					\
 		../lib/my/my_getnbr.c					\
@@ -86,15 +88,15 @@ SRC	=	../lib/my/my_putchar.c					\
 		../lib/my/my_showstr.c					\
 		../lib/my/my_strrchr.c					\
 		../lib/my/my_strncpy.c					\
-		# ../lib/my/my_strdup.c					\
-# 		../lib/my/my_strndup.c					\
-# 		../lib/my/my_strstr.c					\
+		../lib/my/my_add_str_to_array.c			\
+		../lib/my/my_strdup.c					\
+		../lib/my/my_strncat.c					\
+		../lib/my/my_strncmp.c					\
+		../lib/my/my_strstr.c					\
+		../lib/my/my_sort_int_array.c			\
+		../lib/my/my_strsep.c					\
+		../lib/my/my_strtowordarray.c			\
 # 		../lib/my/my_showmem.c					\
-# 		../lib/my/my_strncat.c					\
-# 		../lib/my/my_strncmp.c					\
-# 		../lib/my/my_strsep.c					\
-# 		../lib/my/my_strtowordarray.c			\
-# 		../lib/my/my_sort_int_array.c			\
 
 OBJ			=	$(SRC:.c=.o)
 OBJ_TEST	=	$(SRC_TEST:.c=.o)
