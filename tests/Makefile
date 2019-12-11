@@ -50,6 +50,40 @@ SRC_TEST	=	my_putchar_test.c				\
 				my_add_str_to_array_test.c		\
 				my_strsep_test.c				\
 				my_strtowordarray_test.c		\
+				my_alphaisprint_tests_kais.c	\
+				my_compute_power_rec_tests_kais.c	\
+				my_compute_square_root_tests_kais.c	\
+				my_find_prime_sup_tests_kais.c	\
+				my_getnbr_tests_kais.c			\
+				my_is_prime_tests_kais.c		\
+				my_isneg_tests_kais.c			\
+				my_put_nbr_base_tests_kais.c	\
+				my_put_nbr_tests_kais.c			\
+				my_putchar_tests_kais.c			\
+				my_putstr_tests_kais.c			\
+				my_revstr_tests_kais.c			\
+				my_showstr_tests_kais.c			\
+				my_sort_int_array_tests_kais.c	\
+				my_str_isalpha_tests_kais.c		\
+				my_str_islower_tests_kais.c		\
+				my_str_isnum_tests_kais.c		\
+				my_str_isprintable_tests_kais.c	\
+				my_str_isupper_tests_kais.c		\
+				my_strcapitalize_tests_kais.c	\
+				my_strcat_tests_kais.c			\
+				my_strcmp_tests_kais.c			\
+				my_strcpy_tests_kais.c			\
+				my_strdup_tests_kais.c			\
+				my_strlen_tests_kais.c			\
+				my_strlowcase_tests_kais.c		\
+				my_strncat_tests_kais.c			\
+				my_strncmp_tests_kais.c			\
+				my_strncpy_tests_kais.c			\
+				my_strndup_tests_kais.c			\
+				my_strsep_tests_kais.c			\
+				my_strstr_tests_kais.c			\
+				my_strupcase_tests_kais.c		\
+				my_swap_tests_kais.c			\
 # 				my_showmem_test.c				\
 
 SRC	=	../lib/my/my_putchar.c					\
