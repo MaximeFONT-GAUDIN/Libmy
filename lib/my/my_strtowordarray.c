@@ -40,14 +40,14 @@ char **my_strtowordarray(char *str, char *separator)
 {
     char **ret;
     int p = 0;
-    int malloc_the_array = 0;
+    int my_malloc_the_array = 0;
     int j = 0;
 
-    ret = malloc(sizeof(char *) * (how_many_array(str, separator) + 2));
+    ret = my_malloc(sizeof(char *) * (how_many_array(str, separator) + 2));
     for (; it_is_separator(str[p], separator) == 1; p++);
     for (int i = 0; i != how_many_array(str, separator) + 1; i++) {
-        for (malloc_the_array = 0; it_is_separator(str[p], separator) == 0 && str[p] != 0; p++, malloc_the_array++);
-        ret[i] = malloc(sizeof(char) * (malloc_the_array + 1));
+        for (my_malloc_the_array = 0; it_is_separator(str[p], separator) == 0 && str[p] != 0; p++, my_malloc_the_array++);
+        ret[i] = my_malloc(sizeof(char) * (my_malloc_the_array + 1));
         for (; it_is_separator(str[p], separator) == 1; p++);
     }
     for (p = 0; it_is_separator(str[p], separator) == 1; p++);
