@@ -105,7 +105,7 @@ CC			=	clang
 
 COVERAGE	=  -fprofile-arcs -ftest-coverage -fsanitize=address
 CFLAGS		=	-W -Wall -Wextra -Werror -fstack-protector -fstack-protector-all -fstack-protector-strong -Wstack-protector -Dmalloc=my_malloc $(COVERAGE)
-LDFLAGS		= $(shell pkg-config --libs --cflags criterion) $(COVERAGE)
+LDFLAGS		= $(shell pkg-config --libs --cflags criterion) $(COVERAGE) $(CFLAGS)
 
 all:	$(OBJ) $(OBJ_TEST)
 		$(CC) $^ -o tests $(LDFLAGS)
